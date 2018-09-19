@@ -81,3 +81,15 @@ df_sono%>%
             min_sono = min(sono_total),
             max_sono = max(sono_total),
             total=n())
+
+
+#instalando o pacote hflights() --- dados de voos do aeroporto de houston
+install.packages('hflights')
+library(hflights)
+#criando um pacote tbl
+##tbl_df são melhores de se ler
+
+flights<-tbl_df(hflights)
+flights
+
+data.frame(flights)
